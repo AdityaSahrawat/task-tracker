@@ -133,6 +133,13 @@ const Home = () => {
             <Navbar />
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                {import.meta.env.VITE_INSTANCE === 'prod' && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl mb-6 flex items-center gap-2 text-sm font-medium">
+                        <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse"></span>
+                        <span>make sure be is running on : <a href="https://task-tracker-backend-idko.onrender.com" target="_blank" rel="noopener noreferrer" className="underline font-semibold hover:text-red-800">https://task-tracker-backend-idko.onrender.com</a></span>
+                    </div>
+                )}
+
                 {/* Stats Section */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
